@@ -39,11 +39,13 @@ const yesClickHandler = () => {
 // No button click handler
 const noClickHandler = () => {
   numClicks++;
-  if(noButtonSize === 0){
+  if(noButtonSize === 2){
     noBtn.style.display = "none";
   }
   noButtonSize -= 2;
+  
   updateContent();  // Update image and phrase
+  yesBtn.classList.add("pulse");
   noBtn.style.fontSize = noButtonSize + "px";
 };
 
