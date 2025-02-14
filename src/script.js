@@ -5,7 +5,6 @@ let isValentine = false;
 // Select buttons
 let yesBtn = document.getElementById("yesBtn");
 let noBtn = document.getElementById("noBtn");
-let yesButtonSize = 16;
 let noButtonSize = 16;
 const imageFolder = 'images/'
 const gifs = ["charliebrown1.gif", "charliebrown2.gif", "charliebrown3.gif", "charliebrown4.gif", "charliebrown0.gif"];
@@ -13,7 +12,6 @@ const phrases = [
   "Will you be my valentine?", 
   "Hold on there! What do you think you're doing?", 
   "Who do you think you are?", 
-  "Are you sure you want to suffer the tortures of the memories of a lost love?", 
   "Awwwwww! Are you sure you want to risk losing me?"
 ];
 
@@ -41,13 +39,11 @@ const yesClickHandler = () => {
 // No button click handler
 const noClickHandler = () => {
   numClicks++;
-  yesButtonSize += 2;
-  if(noButtonSize.size > 0){
+  if(noButtonSize === 0){
     noBtn.style.display = "none";
   }
   noButtonSize -= 2;
   updateContent();  // Update image and phrase
-  yesBtn.style.fontSize = yesButtonSize + "px";
   noBtn.style.fontSize = noButtonSize + "px";
 };
 
