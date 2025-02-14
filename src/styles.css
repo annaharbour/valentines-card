@@ -1,48 +1,91 @@
 body {
-	margin: 0;
-	width: 100%;
-	height: 100vh;
-	font-family: Arial, sans-serif;
-	padding: auto;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    padding: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.container {
+    text-align: center;
+    padding: 1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
-.container {
-	text-align: center;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
+
 
 h1 {
-	font-size: 3rem;
-	color: red;
-	text-align: center;
+    font-size: 3rem;
+    color: red;
+    text-align: center;
 }
 
 h3 {
-	font-size: 2rem;
-	color: #333;
-	text-align: center;
-	color: pink;
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    color: pink;
 }
 
 .buttons {
-	display: flex;
-	justify-content: center;
-	margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
 }
 
 .buttons button {
-	padding: 1rem 2rem;
-	font-size: 1.5rem;
-	margin: 0 1rem;
-	cursor: pointer;
-	border: none;
-	border-radius: 5px;
-	color: white;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .buttons button {
+        padding: 0.75rem 1.5rem;
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    .buttons button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
 }
 
 .buttons button {
